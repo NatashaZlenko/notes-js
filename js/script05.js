@@ -242,44 +242,44 @@
 
 //  ============= Паттерн «Объект параметров»
 
-const book = {
-    title: "The Last Kingdom",
-    numberOfPages: 234,
-    downloads: 45,
-    isPublic: false,
-    rating: 8.38,
-};
+// const book = {
+//     title: "The Last Kingdom",
+//     numberOfPages: 234,
+//     downloads: 45,
+//     isPublic: false,
+//     rating: 8.38,
+// };
 
-console.log('1');
+// console.log('1');
 
-function doStuffWithBook(book) {
-    const { title, numberOfPages, downloads, rating, isPublic } = book;
-    console.log(title);
-    console.log(numberOfPages);
-    console.log(downloads);
-    console.log(rating);
-    console.log(isPublic);
-};
+// function doStuffWithBook(book) {
+//     const { title, numberOfPages, downloads, rating, isPublic } = book;
+//     console.log(title);
+//     console.log(numberOfPages);
+//     console.log(downloads);
+//     console.log(rating);
+//     console.log(isPublic);
+// };
 
-doStuffWithBook(book);
+// doStuffWithBook(book);
 
-console.log('');
-console.log('2');
+// console.log('');
+// console.log('2');
 
-function doStuffWithBook2({
-    title,
-    numberOfPages,
-    downloads,
-    rating,
-    isPublic,
-}) {
-    console.log(title);
-    console.log(numberOfPages);
-    console.log(downloads);
-    console.log(rating);
-    console.log(isPublic);
-};
+// function doStuffWithBook2({
+//     title,
+//     numberOfPages,
+//     downloads,
+//     rating,
+//     isPublic,
+// }) {
+//     console.log(title);
+//     console.log(numberOfPages);
+//     console.log(downloads);
+//     console.log(rating);
+//     console.log(isPublic);
+// };
 
-doStuffWithBook2(book);
+// doStuffWithBook2(book);
 
 
