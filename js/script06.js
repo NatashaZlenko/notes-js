@@ -115,101 +115,130 @@
 
 //  ============= Метод forEach
 
-console.log('Метод forEach');
-console.log('массив.forEach(function callback(element, index, array) {}');
+// console.log('Метод forEach');
+// console.log('массив.forEach(function callback(element, index, array) {}');
 
-const numbers = [5, 10, 15, 20, 25];
-// Классический for
-for (let i = 0; i < numbers.length; i += 1) {
-    console.log(`Индекс ${i}, значение ${numbers[i]}`);
-}
+// const numbers = [5, 10, 15, 20, 25];
+// // Классический for
+// for (let i = 0; i < numbers.length; i += 1) {
+//     console.log(`Индекс ${i}, значение ${numbers[i]}`);
+// }
 
-// Перебирающий forEach
-numbers.forEach(function(number, index) {
-    console.log(`Индекс ${index}, значение ${number}`);
-}) 
-
-
-//  ============= Стрелочные функции
-
-console.log('');
-console.log('Стрелочные функции');
-
-function classicAdd(a, b, c) {
-    return a + b + c;
-}
-
-const arrowAdd = (a, b, c) => {
-    return a + b + c;
-}
-
-const add = a => {
-    return a + 5;
-}
-
-const greet = () => {
-    console.log('hello!');
-}
-
-console.log(classicAdd(1, 2, 3));
-console.log(arrowAdd(2, 2, 3));
-console.log(add(3));
-console.log(greet());
+// // Перебирающий forEach
+// numbers.forEach(function(number, index) {
+//     console.log(`Индекс ${index}, значение ${number}`);
+// }) 
 
 
-//  ============= Неявный возврат
+// //  ============= Стрелочные функции
 
-console.log('');
-console.log('явный возврат (explicit return)');
+// console.log('');
+// console.log('Стрелочные функции');
 
-const add1 = (a, b, c) => {
-    console.log(a, b, c);
-    return a + b + c;
-}
-console.log(add(1, 2, 3));
+// function classicAdd(a, b, c) {
+//     return a + b + c;
+// }
 
-console.log('неявный возврат (implicit return)');
+// const arrowAdd = (a, b, c) => {
+//     return a + b + c;
+// }
 
-const add2 = (a, b, c) => a + b + c;
-console.log(add2(1, 3, 3));
+// const add = a => {
+//     return a + 5;
+// }
 
-console.log('example');
+// const greet = () => {
+//     console.log('hello!');
+// }
 
-function classicAdd2 (a, b, c) {
-    return a + b + c;
-}
-
-const arrowAdd2 = (a, b, c) => a + b + c;
-
-console.log(classicAdd2(1, 2, 3));
-console.log(arrowAdd2(1, 2, 3));
-
-
-//  ============= Псевдомассив arguments
-console.log('Псевдомассив arguments');
-
-const add3 = (...args) => {
-    console.log(args);
-}
-
-add3(1, 2, 3);
+// console.log(classicAdd(1, 2, 3));
+// console.log(arrowAdd(2, 2, 3));
+// console.log(add(3));
+// console.log(greet());
 
 
-//  ============= Стрелочные функции как коллбеки
-console.log('Стрелочные функции как коллбеки');
+// //  ============= Неявный возврат
 
-const numbers = [5, 10, 15, 20, 25];
+// console.log('');
+// console.log('явный возврат (explicit return)');
 
-console.log('Объявление функции');
-numbers.forEach(function (number,index) {
-    console.log(`Индекс ${index}, значение ${number}`);
-});
+// const add1 = (a, b, c) => {
+//     console.log(a, b, c);
+//     return a + b + c;
+// }
+// console.log(add(1, 2, 3));
 
-console.log('Анонимная стрелочная функция');
-number.forEach((number, index) => {
-    console.log(`Индекс ${index}, значение ${number}`);
-});
+// console.log('неявный возврат (implicit return)');
+
+// const add2 = (a, b, c) => a + b + c;
+// console.log(add2(1, 3, 3));
+
+// console.log('example');
+
+// function classicAdd2 (a, b, c) {
+//     return a + b + c;
+// }
+
+// const arrowAdd2 = (a, b, c) => a + b + c;
+
+// console.log(classicAdd2(1, 2, 3));
+// console.log(arrowAdd2(1, 2, 3));
 
 
+// //  ============= Псевдомассив arguments
+// console.log('Псевдомассив arguments');
 
+// const add3 = (...args) => {
+//     console.log(args);
+// }
+
+// add3(1, 2, 3);
+
+
+// //  ============= Стрелочные функции как коллбеки
+
+// console.log('');
+// console.log('Стрелочные функции как коллбеки');
+// console.log('');
+
+// const numbers1 = [5, 10, 15, 20, 25];
+
+// console.log('Объявление функции');
+// numbers1.forEach(function (number,index) {
+//     console.log(`Индекс ${index}, значение ${number}`);
+// });
+
+// console.log('Анонимная стрелочная функция');
+// numbers1.forEach((number, index) => {
+//     console.log(`Индекс ${index}, значение ${number}`);
+// });
+
+// const logMessage = (number, index) => {
+//     console.log(`Индекс ${index}, значение ${number}`);
+// }
+
+// console.log('');
+// numbers.forEach(logMessage);
+
+
+//  ============= Разновидности кода
+// console.log('Разновидности кода');
+// console.log('');
+
+// console.log('Императивный подход');
+
+// const numbers = [1, 2, 3, 4, 5];
+// const filteredNumbers = [];
+
+// for (let i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] > 3) {
+//         filteredNumbers.push(numbers[i]);
+//     }
+// }
+// console.log(filteredNumbers);
+
+// console.log('Императивный подход');
+
+// const filteredNumbers2 = numbers.filter(value => value < 3);
+// console.log(filteredNumbers2);
 
