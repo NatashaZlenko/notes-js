@@ -336,28 +336,28 @@
 
 
 
-// // console.log('перед сортировкой делают полную копию исходного массива и сортируют уже её.');
+// console.log('перед сортировкой делают полную копию исходного массива и сортируют уже её.');
 
-// // const scores1 = [61, 19, 74, 35, 92, 56];
-// // const ascendingScores = [...scores1].sort();
-// // console.log(scores1);
-// // console.log(ascendingScores);
-
-
-
-// // console.log('Свой порядок сортировки чисел');
-
-// // const scores2 = [61, 19, 74, 35, 92, 56];
-
-// // const ascendingScores2 = [...scores2].sort((a, b) => a - b);
-// // console.log(ascendingScores2);
-
-// // const descendingScores = [...scores2].sort((a, b) => b - a);
-// // console.log(descendingScores);
+// const scores1 = [61, 19, 74, 35, 92, 56];
+// const ascendingScores = [...scores1].sort();
+// console.log(scores1);
+// console.log(ascendingScores);
 
 
 
-// // console.log('Свой порядок сортировки строк');
+// console.log('Свой порядок сортировки чисел');
+
+// const scores2 = [61, 19, 74, 35, 92, 56];
+
+// const ascendingScores2 = [...scores2].sort((a, b) => a - b);
+// console.log(ascendingScores2);
+
+// const descendingScores = [...scores2].sort((a, b) => b - a);
+// console.log(descendingScores);
+
+
+
+// console.log('Свой порядок сортировки строк');
 
 // // const students2 = ["Вика", "Андрей", "Олег", "Юля", "Борис", "Катя"];
 
