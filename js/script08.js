@@ -172,12 +172,30 @@ const steam = {
     service: 'steam',
 }; 
 const steamGreeter = greet.bind(steam);
-steamGreeter('Lora');
 
-// const gmail = {
-//     service: 'gmail',
-// };
-// const gmailGreeter = greet.bind(gmail);
-// gmailGreeter('Nora');
+console.log(steamGreeter('Lora'));
+
+const gmail = {
+    service: 'gmail',
+};
+const gmailGreeter = greet.bind(gmail);
+console.log(gmailGreeter('Nora'));
 
 
+
+console.log('');
+console.log('bind() и методы объекта');
+
+const customer = {
+    firstName: "Jacob",
+    lastName: "Mercer",
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    },
+};
+
+function makeMessage(callback) {
+    console.log(`Обрабатываем заявку от ${callback()}.`);
+};
+
+makeMessage(customer.getFullName.bind(customer));
