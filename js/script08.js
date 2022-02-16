@@ -132,70 +132,70 @@
 
 
 // Методы функций
-console.log('Методы функций');
-console.log('');
+// console.log('Методы функций');
+// console.log('');
 
 
-console.log('Метод call()');
+// console.log('Метод call()');
 
-function greetGuest(greeting) {
-    console.log(`${greeting}, ${this.username}.`);
-};
+// function greetGuest(greeting) {
+//     console.log(`${greeting}, ${this.username}.`);
+// };
 
-const mango = {
-    username: 'mango',
-};
-const poly = {
-    username: 'poly',
-};
+// const mango = {
+//     username: 'mango',
+// };
+// const poly = {
+//     username: 'poly',
+// };
 
-greetGuest.call(mango, "Добро пожаловать");
-greetGuest.call(poly, "С приездом");
-
-
-console.log('');
-console.log('Метод apply()');
-
-greetGuest.apply(mango, ["Добро пожаловать"]);
-greetGuest.apply(poly, ["С приездом"]);
+// greetGuest.call(mango, "Добро пожаловать");
+// greetGuest.call(poly, "С приездом");
 
 
+// console.log('');
+// console.log('Метод apply()');
 
-console.log('');
-console.log('Метод bind()');
-
-function greet(clientName) {
-    return `${clientName}, добро пожаловать в "${this.service}".`;
-}
-
-const steam = {
-    service: 'steam',
-}; 
-const steamGreeter = greet.bind(steam);
-
-console.log(steamGreeter('Lora'));
-
-const gmail = {
-    service: 'gmail',
-};
-const gmailGreeter = greet.bind(gmail);
-console.log(gmailGreeter('Nora'));
+// greetGuest.apply(mango, ["Добро пожаловать"]);
+// greetGuest.apply(poly, ["С приездом"]);
 
 
 
-console.log('');
-console.log('bind() и методы объекта');
+// console.log('');
+// console.log('Метод bind()');
 
-const customer = {
-    firstName: "Jacob",
-    lastName: "Mercer",
-    getFullName() {
-        return `${this.firstName} ${this.lastName}`;
-    },
-};
+// function greet(clientName) {
+//     return `${clientName}, добро пожаловать в "${this.service}".`;
+// }
 
-function makeMessage(callback) {
-    console.log(`Обрабатываем заявку от ${callback()}.`);
-};
+// const steam = {
+//     service: 'steam',
+// }; 
+// const steamGreeter = greet.bind(steam);
 
-makeMessage(customer.getFullName.bind(customer));
+// console.log(steamGreeter('Lora'));
+
+// const gmail = {
+//     service: 'gmail',
+// };
+// const gmailGreeter = greet.bind(gmail);
+// console.log(gmailGreeter('Nora'));
+
+
+
+// console.log('');
+// console.log('bind() и методы объекта');
+
+// const customer = {
+//     firstName: "Jacob",
+//     lastName: "Mercer",
+//     getFullName() {
+//         return `${this.firstName} ${this.lastName}`;
+//     },
+// };
+
+// function makeMessage(callback) {
+//     console.log(`Обрабатываем заявку от ${callback()}.`);
+// };
+
+// makeMessage(customer.getFullName.bind(customer));
