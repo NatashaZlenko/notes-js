@@ -7,9 +7,83 @@
     <title>Document</title>
 </head>
 <body>
+
     <section>
-        
+
+        <h1>Page Title</h1>
+        <ul>
+            <li><a href="#">Link1</a></li>
+            <li><a href="#">Link2</a></li>
+        </ul>
+
     </section>
+
+    <section>
+
+        <p> 
+        Элементы DOM-дерева имеют иерархическое отношение друг к другу. 
+        Для описания отношений используются термины предок (ancestor), 
+        потомок (descendant), родитель (parent), ребенок (child) и сосед (sibling).
+        </p>
+
+        <ul>
+            <li> самый верхний элемент называется корневым (root node).</li>
+            <li> каждый элемент, кроме корневого, имеет только одного родителя.</li>
+            <li> у елемента может быть сколько угодно детей.</li>
+            <li> соседи - это элементы с общим родителем.</li>
+            <li> дочерние элементы (дети) - элементы, которые лежат непосредственно внутри текущего (первая вложенность).</li>
+            <li> потомки - все элементы, которые лежат внутри текущегоб вместе с их детьми, детьми их детей и тд. То есть все поддерево.</li>
+        </ul>
+
+    </section>
+
+    <section>
+
+        <p>Для навигации по этой иерархии у элементов есть следующие свойства.</p>
+        <ul>
+            <li>elem.parentNode - выберет родителя elem.</li>
+            <li>elem.childNode - псевдомассив, хранит все дочерние элементы, включая текстовые.</li>
+            <li>elem.children - псевдомассив, хранит только дочерние узлы-элементы, то есть соответствующие тегам.</li>
+            <li>elem.firstChild - выберет первый дочерний элемент внутри elem, включая текстовые узлы.</li>
+            <li>elem.firstElementChild - выберет первый дочерний узел-элемент внутри elem.</li>
+            <li>elem.lastChild - выберет последний дочерний элемент внутри elem, включая текстовые узлы.</li>
+            <li>elem.lastElementChild -  выберет последний дочерний узел-элемент внутри elem.</li>
+            <li>elem.previousSibling - выберет элемент «слева» от elem (его предыдущего соседа).</li>
+            <li>elem.previousElementSibling - выберет узел-элемент «слева» от elem (его предыдущего соседа).</li>
+            <li>elem.nextSibling - выберет элемент «справа» от elem (его следующего соседа)</li>
+            <li>elem.nextElementSibling - выберет узел-элемент «справа» от elem (его следующего соседа).</li>
+        </ul>
+
+    </section>
+
+    <section>
+
+        <ul id="menu" class="menu">
+            <li class="menu-item">home</li>
+            <li class="menu-item">about</li>
+            <li class="menu-item">gallery</li>
+            <li>blog</li>
+        </ul>
+
+    </section>
+
+    <section>
+
+        <textarea id="message" class="materialize-textarea" rows="5">
+            Default textarea message
+        </textarea>
+
+        <div>
+            <a href="/home" class="btn">home</a>
+            <a href="/about" class-="btn active">about</a>
+            <a href="/gallery" class="btn">gallery</a>
+        </div>
+
+        <br>
+        <img class="image" src="https://placeimg.com/640/480/animals" alt="" width="320">
+
+    </section>
+
     <!-- Ветвления и циклы -->
     <script src='js/script01.js' type="module"></script>
     <!-- Массивы -->
@@ -30,5 +104,6 @@
     <script src='js/script09.js' type="module"></script>
     <!-- DOM -->
     <script src='js/script10.js' type="module"></script>
+
 </body>
 </html>
