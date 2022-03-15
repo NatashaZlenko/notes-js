@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <title>Document</title>
 </head>
 <body>
@@ -75,7 +76,7 @@
 
         <div>
             <a href="/home" class="btn">home</a>
-            <a href="/about" class-="btn active">about</a>
+            <a href="/about" class="btn active">about</a>
             <a href="/gallery" class="btn">gallery</a>
         </div>
 
@@ -83,6 +84,129 @@
         <img class="image" src="https://placeimg.com/640/480/animals" alt="" width="320">
 
     </section>
+
+    <article class="article">
+        <h2 class="article-title">Welcome to Hawaii!</h2>
+        <p class="article-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Provident quaerat nemo 
+            veritatis quasi eius eum aliquid, nobis
+            dolore nisi, magnam eaque iusto, necessitatibus atque 
+            laborum quam tempora ducimus dicta ipsam.
+        </p>
+    </article>
+
+    <section>
+        <h2>Свойство classList</h2>
+        <ul>
+            <li>elem.classList.contains(cls) - возвращает true или false в завсисимости от того, есть ли у элемента класс cls</li>
+            <li>elem.classList.add(cls) - добавляет класс cls в список классов элемента</li>
+            <li>elem.classList.remove(cls) - удаляет класс из списка классов элемента</li>
+            <li>elem.cassList.togge(cls) - если класса cls нет, то добавляет его, если есть то наоборот, удаляет</li>
+            <li>elem.classList.replace(oldCls, newCls) - заменяет существующий класс oldCls на newCls</li>
+        </ul>
+    </section>
+
+    <p id="paragraph" class="text red big">Proin magna. Sed mollis, eros et ultrices tempus, mauris 
+    ipsum aliquam libero, non adipiscing dolor urna a orci. Etiam
+    rhoncus. Donec mi odio, faucibus at, scelerisque quis, 
+    convallis in, nisi</p>
+
+
+    <button class="button">OK</button>
+
+    <section>
+        <h2>Атрибуты</h2>
+        <p>DOM-элементам соответствуют HTML-теги у которых есть 
+        текстовые атрибуты. Доступ к атрибутам 
+        осуществляется при помощи стандартных методов. 
+        Эти методы работают со значением, которое находится 
+        в HTML.</p>
+
+        <ul>
+            <li>elem.hasAttribute(name) - проверяет наличие атрибута, возвращает буль</li>
+            <li>elem.getAttribute(name) - получает значение атрибута и возвращает его</li>
+            <li>elem.setAttribute(name, value) - устанавливает атрибут</li>
+            <li>elem.removeAttribute(name) - удаляет атрибут</li>
+            <li>elem.attributes - свойство, возвращает объект всех атрибутов элемента</li>
+        </ul>
+
+        <img class="image-attribute" src="https://placeimg.com/400/200/nature"
+        alt="Beautiful nature">
+
+    </section>
+
+    <section>
+        <button type="button" data-action="save">save</button>
+        <button type="button" data-action="close">close</button>
+    </section>
+
+    
+    <!-- КОЛДУЕМ С ВЕРСТКОЙ -->
+    <section>
+        <div class="editor">
+            <p>
+                Donec id justo. Praesent porttitor, nulla vitae 
+                posuere iaculis, arcu nisl dignissim dolor, a 
+                pretium mi sem ut ipsum. Curabitur suscipit 
+                suscipit tellus. Phasellus gravida semper nisi.
+            </p>
+            <div class="actions">
+                <button type="button" class="btn-actions" data-action="save">
+                    save
+                </button>
+                <button type="button" class="btn-actions" data-action="close">
+                    close
+                </button>
+            </div>
+        <div>
+
+        <ul class="dishes">
+            <li data-id="14">Baked Yak &amp; Mushrooms</li>
+            <li data-id="7">Strawberry Pancakes</li>
+            <li data-id="3">Caramel Toffee</li>
+            <li data-id="61">Pistachio Elderberry Wafer</li>
+        </ul>
+    </section>
+
+
+    <section>
+        <p>
+            Чтобы созданный элемент был отображен на странице, 
+            его необходимо добавить к уже существующему элементу
+            в DOM-дереве.Допустим, что добавляем в некий 
+            элемент element, для этого есть методы.
+        </p>
+
+        <ul>
+            <li>element.append(el1, el2, ...) - добавляет один или несколько элементов после всех детей элемента element</li>
+            <li>element.prepend(el1, el2, ...) - добавляет один или несколько элементов перед всеми детьми элемента element</li>
+            <li>element.after(el1, el2, ...) - добавляет один или несколько элементов после элемента element</li>
+            <li>element.before(el1, el2, ...) - добавляет один или несколько элементов перед элементом element.</li>
+        </ul>
+    </section>
+
+    
+    <section>
+        <div class="container">
+            <ul class="usernames">
+                <li>Mango</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- Свойство innerHTML -->
+
+    <article class="article0">
+        <h2 class="title0">Article title</h2>
+        <p class="text0">
+            Lorem ipsum dolor sit amet consectetur, 
+            adipisicing elit. <strong>Dolore</strong>, ipsa quibusdam!
+        </p>
+        <a class="link0" href="">Read more</a>
+    </article>
+    
 
     <!-- Ветвления и циклы -->
     <script src='js/script01.js' type="module"></script>
