@@ -1,5 +1,48 @@
-.accent {
-  color: red;
-  text-decoration: underline;
-  font-size: 34px;
+/* practice (2) */
+/* Метод addEventListener(2) */
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 1rem;
+  text-align: center;
+}
+
+button {
+  background-color: pink;
+  border-color: brown;
+  color: brown;
+} */
+
+/* Объект события(5) */
+
+/* body {
+  padding: 16px;
+  text-align: center;
+} */
+
+/* Действия браузера по умолчанию(6) */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form input {
+  margin-bottom: 16px;
+  padding: 8px 12px;
+}
+
+.register-form button {
+  padding: 12px;
 }

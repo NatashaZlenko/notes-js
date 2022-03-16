@@ -9,225 +9,39 @@
 </head>
 <body>
 
-    <section>
+    <!-- practice (2) -->
+    <!-- Метод addEventListener(2) -->
 
-        <h1>Page Title</h1>
-        <ul>
-            <li><a href="#">Link1</a></li>
-            <li><a href="#">Link2</a></li>
-        </ul>
-
-    </section>
-
-    <section>
-
-        <p> 
-        Элементы DOM-дерева имеют иерархическое отношение друг к другу. 
-        Для описания отношений используются термины предок (ancestor), 
-        потомок (descendant), родитель (parent), ребенок (child) и сосед (sibling).
-        </p>
-
-        <ul>
-            <li> самый верхний элемент называется корневым (root node).</li>
-            <li> каждый элемент, кроме корневого, имеет только одного родителя.</li>
-            <li> у елемента может быть сколько угодно детей.</li>
-            <li> соседи - это элементы с общим родителем.</li>
-            <li> дочерние элементы (дети) - элементы, которые лежат непосредственно внутри текущего (первая вложенность).</li>
-            <li> потомки - все элементы, которые лежат внутри текущегоб вместе с их детьми, детьми их детей и тд. То есть все поддерево.</li>
-        </ul>
-
-    </section>
-
-    <section>
-
-        <p>Для навигации по этой иерархии у элементов есть следующие свойства.</p>
-        <ul>
-            <li>elem.parentNode - выберет родителя elem.</li>
-            <li>elem.childNode - псевдомассив, хранит все дочерние элементы, включая текстовые.</li>
-            <li>elem.children - псевдомассив, хранит только дочерние узлы-элементы, то есть соответствующие тегам.</li>
-            <li>elem.firstChild - выберет первый дочерний элемент внутри elem, включая текстовые узлы.</li>
-            <li>elem.firstElementChild - выберет первый дочерний узел-элемент внутри elem.</li>
-            <li>elem.lastChild - выберет последний дочерний элемент внутри elem, включая текстовые узлы.</li>
-            <li>elem.lastElementChild -  выберет последний дочерний узел-элемент внутри elem.</li>
-            <li>elem.previousSibling - выберет элемент «слева» от elem (его предыдущего соседа).</li>
-            <li>elem.previousElementSibling - выберет узел-элемент «слева» от elem (его предыдущего соседа).</li>
-            <li>elem.nextSibling - выберет элемент «справа» от elem (его следующего соседа)</li>
-            <li>elem.nextElementSibling - выберет узел-элемент «справа» от elem (его следующего соседа).</li>
-        </ul>
-
-    </section>
-
-    <section>
-
-        <ul id="menu" class="menu">
-            <li class="menu-item">home</li>
-            <li class="menu-item">about</li>
-            <li class="menu-item">gallery</li>
-            <li>blog</li>
-        </ul>
-
-    </section>
-
-    <section>
-
-        <textarea id="message" class="materialize-textarea" rows="5">
-            Default textarea message
-        </textarea>
-
-        <div>
-            <a href="/home" class="btn">home</a>
-            <a href="/about" class="btn active">about</a>
-            <a href="/gallery" class="btn">gallery</a>
-        </div>
-
-        <br>
-        <img class="image" src="https://placeimg.com/640/480/animals" alt="" width="320">
-
-    </section>
-
-    <article class="article">
-        <h2 class="article-title">Welcome to Hawaii!</h2>
-        <p class="article-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Provident quaerat nemo 
-            veritatis quasi eius eum aliquid, nobis
-            dolore nisi, magnam eaque iusto, necessitatibus atque 
-            laborum quam tempora ducimus dicta ipsam.
-        </p>
-    </article>
-
-    <section>
-        <h2>Свойство classList</h2>
-        <ul>
-            <li>elem.classList.contains(cls) - возвращает true или false в завсисимости от того, есть ли у элемента класс cls</li>
-            <li>elem.classList.add(cls) - добавляет класс cls в список классов элемента</li>
-            <li>elem.classList.remove(cls) - удаляет класс из списка классов элемента</li>
-            <li>elem.cassList.togge(cls) - если класса cls нет, то добавляет его, если есть то наоборот, удаляет</li>
-            <li>elem.classList.replace(oldCls, newCls) - заменяет существующий класс oldCls на newCls</li>
-        </ul>
-    </section>
-
-    <p id="paragraph" class="text red big">Proin magna. Sed mollis, eros et ultrices tempus, mauris 
-    ipsum aliquam libero, non adipiscing dolor urna a orci. Etiam
-    rhoncus. Donec mi odio, faucibus at, scelerisque quis, 
-    convallis in, nisi</p>
-
-
-    <button class="button">OK</button>
-
-    <section>
-        <h2>Атрибуты</h2>
-        <p>DOM-элементам соответствуют HTML-теги у которых есть 
-        текстовые атрибуты. Доступ к атрибутам 
-        осуществляется при помощи стандартных методов. 
-        Эти методы работают со значением, которое находится 
-        в HTML.</p>
-
-        <ul>
-            <li>elem.hasAttribute(name) - проверяет наличие атрибута, возвращает буль</li>
-            <li>elem.getAttribute(name) - получает значение атрибута и возвращает его</li>
-            <li>elem.setAttribute(name, value) - устанавливает атрибут</li>
-            <li>elem.removeAttribute(name) - удаляет атрибут</li>
-            <li>elem.attributes - свойство, возвращает объект всех атрибутов элемента</li>
-        </ul>
-
-        <img class="image-attribute" src="https://placeimg.com/400/200/nature"
-        alt="Beautiful nature">
-
-    </section>
-
-    <section>
-        <button type="button" data-action="save">save</button>
-        <button type="button" data-action="close">close</button>
-    </section>
-
+    <!-- <button id="single" class="btn">SINGLE CALLBACK</button>
+    <hr>
+    <button id="multiple" class="btn">MULLTIPLE CALLBACKS</button> -->
     
-    <!-- КОЛДУЕМ С ВЕРСТКОЙ -->
-    <section>
-        <div class="editor">
-            <p>
-                Donec id justo. Praesent porttitor, nulla vitae 
-                posuere iaculis, arcu nisl dignissim dolor, a 
-                pretium mi sem ut ipsum. Curabitur suscipit 
-                suscipit tellus. Phasellus gravida semper nisi.
-            </p>
-            <div class="actions">
-                <button type="button" class="btn-actions" data-action="save">
-                    save
-                </button>
-                <button type="button" class="btn-actions" data-action="close">
-                    close
-                </button>
-            </div>
-        <div>
-
-        <ul class="dishes">
-            <li data-id="14">Baked Yak &amp; Mushrooms</li>
-            <li data-id="7">Strawberry Pancakes</li>
-            <li data-id="3">Caramel Toffee</li>
-            <li data-id="61">Pistachio Elderberry Wafer</li>
-        </ul>
-    </section>
-
-
-    <section>
-        <p>
-            Чтобы созданный элемент был отображен на странице, 
-            его необходимо добавить к уже существующему элементу
-            в DOM-дереве.Допустим, что добавляем в некий 
-            элемент element, для этого есть методы.
-        </p>
-
-        <ul>
-            <li>element.append(el1, el2, ...) - добавляет один или несколько элементов после всех детей элемента element</li>
-            <li>element.prepend(el1, el2, ...) - добавляет один или несколько элементов перед всеми детьми элемента element</li>
-            <li>element.after(el1, el2, ...) - добавляет один или несколько элементов после элемента element</li>
-            <li>element.before(el1, el2, ...) - добавляет один или несколько элементов перед элементом element.</li>
-        </ul>
-    </section>
-
     
-    <section>
-        <div class="container">
-            <ul class="usernames">
-                <li>Mango</li>
-            </ul>
-        </div>
-    </section>
+    <!-- Метод removeEventListener()(3) -->
+    <!-- <button class="btn" data-action="add">Add listener</button>
+    <button class="btn" data-action="remove">Remove listener</button>
+    <hr>
+    <button id="btn" class="btn">Click me</button> -->
 
 
-    <!-- Свойство innerHTML -->
+    <!-- Объект события(5) -->
 
-    <article class="article0">
-        <h2 class="title0">Article title</h2>
-        <p class="text0">
-            Lorem ipsum dolor sit amet consectetur, 
-            adipisicing elit. <strong>Dolore</strong>, ipsa quibusdam!
-        </p>
-        <a class="link0" href="">Read more</a>
-    </article>
-    
+    <!-- <button type="button" class="btn">Click me</button> -->
 
-    <!-- Ветвления и циклы -->
-    <script src='js/script01.js' type="module"></script>
-    <!-- Массивы -->
-    <script src='js/script02.js' type="module"></script>
-    <!-- Функции -->
-    <script src='js/script03.js' type="module"></script>
-    <!-- Объекты -->
-    <script src='js/script04.js' type="module"></script>
-    <!-- Синтаксис spread и rest, деструктуризация  -->
-    <script src='js/script05.js' type="module"></script>
-    <!-- Колбэк-функции и стрелочные функции -->
-    <script src='js/script06.js' type="module"></script>
-    <!-- Перебирающие методы массива -->
-    <script src='js/script07.js' type="module"></script>
-    <!-- ключевое слово this -->
-    <script src='js/script08.js' type="module"></script>
-    <!-- прототипы и классы -->
-    <script src='js/script09.js' type="module"></script>
-    <!-- DOM -->
-    <script src='js/script10.js' type="module"></script>
 
+
+    <!-- Действия браузера по умолчанию(6) -->
+
+    <form class="register-form" autocomplete="off">
+        <input 
+        type="text" name="username" placeholder="Username"
+        />
+        <input 
+        type="password" name="password" placeholder="Password"
+        />
+        <button type="submit">Register</button>
+    </form>
+
+    <script src='js/script.js' type="module"></script>
 </body>
 </html>
