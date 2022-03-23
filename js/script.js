@@ -1,118 +1,59 @@
-// theory (1)
-    
-// const button = document.querySelector('.my-button');
-
-// const handleClick = () => {
-//   console.log('button was clicked');
-// }
-
-// button.addEventListener('click', handleClick);
-
-
-// practice (2)
-// Метод addEventListener(2)
-
-// const singleBtn = document.querySelector('#single');
-
-// const handleClick = () => {
-//   console.log('click event listener callback');
-// };
-
-// singleBtn.addEventListener('click', handleClick);
-
-// // ===============================================
-
-// const multiBtn = document.querySelector('#multiple');
-
-// const firstCallback = () => {
-//   console.log('first callback');
-// };
-// const secondCallback = () => {
-//   console.log('second callback');
-// };
-// const thirdCallback = () => {
-//   console.log('third callback');
-// };
-
-// multiBtn.addEventListener('click', firstCallback);
-// multiBtn.addEventListener('click', secondCallback);
-// multiBtn.addEventListener('click', thirdCallback);
-
-
-
-// Метод removeEventListener()(3)
-
-// const addListenerBtn = document.querySelector('[data-action="add"]');
-// const removeListenerBtn = document.querySelector('[data-action="remove"]');
-// const btn = document.querySelector('#btn');
-
-// const handleClick = () => {
-//   console.log('click event listener callback');
-// };
-
-// addListenerBtn.addEventListener('click', () => {
-//   btn.addEventListener('click', handleClick);
-//   console.log('click event listener was added to btn');
+// События клавиатуры
+// document.addEventListener('keydown', event => {
+//   console.log('Keydown: ', event);
 // });
 
-// removeListenerBtn.addEventListener('click', () => {
-//   btn.removeEventListener('click', handleClick);
-//   console.log('click event listener was removed from btn');
-// });
+// document.addEventListener('keyup', event => {
+//   console.log('Keyup: ', event);
+// })
 
 
 
 
-// Ключевое слово this(4)
+// Свойства key и code
+// пример
+const clearLogBtn = document.querySelector('[data-action="clear"]');
+const logList = document.querySelector(".log-list");
+let keypressCounter = 1;
 
-// const mango = {
-//   username: 'mango',
-//   showUserName() {
-//     console.log(this);
-//     console.log(`My username is: ${this.username}`);
-//   },
-// };
+document.addEventListener("keydown", logMessage);
+document.addEventListener("keyup", logMessage);
+clearLogBtn.addEventListener("click", reset);
 
-// const btn = document.querySelector('.js-btn');
+function logMessage({ type, key, code }) {
+  const markup = `<div class="log-item">
+    <span class="chip">${keypressCounter}</span>
+    <ul>
+      <li><b>Event</b>: ${type}</li>
+      <li><b>Key</b>: ${key}</li>
+      <li><b>Code</b>: ${code}</li>
+    </ul>
+  </div>`;
 
-// mango.showUserName();
+  logList.insertAdjacentHTML("afterbegin", markup);
 
-// btn.addEventListener('click', mango.showUserName);
+  if (type === "keyup") {
+    incrementKeypressCounter();
+  }
+}
 
-// btn.addEventListener('click', mango.showUserName.bind(mango));
+function reset() {
+  keypressCounter = 1;
+  logList.innerHTML = "";
+}
 
-
-
-// Объект события(5)
-
-// theory
-// const handleClick = event => {
-//   console.log(event);
-// };
-
-// button.addEventListener('click', handleClick);
-
-// practise
-// const button = document.querySelector('.btn');
-
-// const handleClick = (event) => {
-//   console.log('event:', event);
-//   console.log('event type:', event.type);
-//   console.log('eventTerget:', event.currentTarget);
-// };
-
-// button.addEventListener('click', handleClick);
+function incrementKeypressCounter() {
+  keypressCounter += 1;
+}
 
 
 
-// Действия браузера по умолчанию(6)
 
-const form = document.querySelector('.register-form');
-
-form.addEventListener('submit', (event) => {
+// Клавиши-модифкаторы
+document.addEventListener('keydown', event => {
   event.preventDefault();
-  const {
-    elements: { username, password }
-  } = event.currentTarget;
-  console.log(username.value, password.value);
-});
+
+  if ((event.ctrlKey )) {
+
+  }
+})
